@@ -19,6 +19,11 @@ public class Aluno {
         this.email = email;
     }
 
+    public Aluno(int id, int cpf) {
+        this.id = id;
+        this.cpf = cpf;
+    }
+
     public int getId() {return id;}
     public void setId(int id) {this.id = id;}
 

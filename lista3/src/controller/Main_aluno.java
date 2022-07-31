@@ -11,8 +11,8 @@ public class Main_aluno {
         Aluno aluno2 = new Aluno();
         Aluno aluno3 = new Aluno(2, 984632789, "Diego", "Santos", "diego_santos@gmail.com");
         Aluno aluno4 = new Aluno(3, 539123973, "Giovana", "Moura", "gi_moura@hotmail.com");
-        Aluno aluno5 = new Aluno(4, 761473398, null, null, null);
-        Aluno aluno6 = new Aluno(5, 893572819, null, null, null);
+        Aluno aluno5 = new Aluno(4, 761473398);
+        Aluno aluno6 = new Aluno(5, 893572819);
         System.out.println(aluno1.toString());
         System.out.println(aluno2.toString());
         System.out.println(aluno3.toString());
