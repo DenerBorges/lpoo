@@ -30,7 +30,7 @@ public class Main_veiculo {
         Carro car5 = new Carro(2, "gasolina", "BMW", "X1", 2022, 180, "974255641", "IP4319987AG1", "IOD3892");
 
         Caminhao cm2 = new Caminhao(5 , "diesel", "Iveco", "Daily City", 2010, 600, "637948432", "JK3839SJ13", "JFK0938");
-        Caminhao cm3 = new Caminhao(4 , "diesel", "Scania", "P 310", 2016, 450, "789434783", "LP4349UI32", "CNS7109");
+        Caminhao cm3 = new Caminhao(4 , "diesel", "Scania", "P 310", 2016, 450, "789434783", "LP4349UI32", "INS7109");
         Caminhao cm4 = new Caminhao(5 , "diesel", "Volvo", "FH", 2014, 750, "137727347", "TD41208AB3", "TAE9847");
         Caminhao cm5 = new Caminhao(4 , "diesel", "MAN", "TGX", 2017, 800, "940432372", "WS08701OM3", "LNC9871");
 
