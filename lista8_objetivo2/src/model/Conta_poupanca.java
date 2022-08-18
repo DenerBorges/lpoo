@@ -7,16 +7,6 @@ public class Conta_poupanca extends Conta{
     }
 
     @Override
-    public double getSaldo() {
-        return saldo;
-    }
-
-    @Override
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
-    @Override
     public void deposita(double valor) {
         super.deposita(valor);
     }
