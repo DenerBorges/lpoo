@@ -8,9 +8,13 @@ public abstract class Conta {
         super();
     }
 
-    public abstract double getSaldo();
+    public Conta(double saldo) {
+        this.saldo = saldo;
+    }
 
-    public abstract void setSaldo(double saldo);
+    public double getSaldo(){
+        return saldo;
+    }
 
     public void deposita(double valor) {
         this.saldo += valor;

@@ -24,8 +24,13 @@ public class Associado implements AssociadoVip{
     }
 
     @Override
+    public int getQuantidadeDeCota() {
+        return qdeCotas;
+    }
+
+    @Override
     public String toString() {
-        return "Associado: [Clientes= " + cliente + ", Lucros= " + lucros +
+        return "\nAssociado: [Clientes= " + cliente + ", Lucros= " + lucros +
                 ", Quantidade de Cotas= " + qdeCotas + ", Valor da Cota= " + valorCota + "]";
     }
 }

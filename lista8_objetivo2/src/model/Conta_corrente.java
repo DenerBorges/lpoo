@@ -17,21 +17,6 @@ public class Conta_corrente extends Conta implements AssociadoVip{
     }
 
     @Override
-    public double getSaldo() {
-        return saldo;
-    }
-
-    @Override
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
-    @Override
-    public double lucros(int qdeCotas, double valorCota) {
-        return lucros;
-    }
-
-    @Override
     public void deposita(double valor) {
         super.deposita(valor);
     }
@@ -47,8 +32,18 @@ public class Conta_corrente extends Conta implements AssociadoVip{
     }
 
     @Override
+    public double lucros(int qdeCotas, double valorCota) {
+        return qdeCotas * valorCota;
+    }
+
+    @Override
+    public int getQuantidadeDeCota() {
+        return qdeCotas;
+    }
+
+    @Override
     public String toString() {
-        return "Conta Corrente: [Lucros= " + lucros + ", Quantidade de Cotas= " + qdeCotas +
+        return "\nConta Corrente: [Lucros= " + lucros + ", Quantidade de Cotas= " + qdeCotas +
                 ", Valor da Cota= " + valorCota + ", Saldo= " + saldo + "]";
     }
 }
