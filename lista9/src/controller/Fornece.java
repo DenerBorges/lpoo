@@ -22,15 +22,15 @@ public class Fornece {
         Produto p3 = new Produto(3, "Sabonete", 6, 35.00, f1);
 
         double total = p1.getPreco() * 50;
-        p1.setQuantidade(p1.getQuantidade() - 50);
+        p1.setQuantidade(p1.getQuantidade() - 5);
         Fornecimento fr1 = new Fornecimento(new GregorianCalendar(2022, Calendar.FEBRUARY, 10, 5, 0), total, f1, p1);
 
         total = p2.getPreco() * 50;
-        p2.setQuantidade(p1.getQuantidade() - 50);
+        p2.setQuantidade(p1.getQuantidade() - 7);
         Fornecimento fr2 = new Fornecimento(new GregorianCalendar(2022, Calendar.JUNE, 8, 10, 0), total, f1, p2);
 
         total = p3.getPreco() * 20;
-        p3.setQuantidade(p1.getQuantidade() - 50);
+        p3.setQuantidade(p1.getQuantidade() - 3);
         Fornecimento fr3 = new Fornecimento(new GregorianCalendar(2022, Calendar.MAY, 2, 15, 0), total, f2, p3);
 
         List<Fornecimento> fornecimentos = new ArrayList<>();
