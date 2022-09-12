@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Pessoa {
     private Long id;
-    private int cpf;
+    private String cpf;
     private String nome;
     private String email;
     private String senha;
@@ -19,7 +19,7 @@ public class Pessoa {
         super();
     }
 
-    public Pessoa(Long id, int cpf, String nome, String email, String senha, String status, String curso, Boolean situacao, Aluguel aluguel) {
+    public Pessoa(Long id, String cpf, String nome, String email, String senha, String status, String curso, Boolean situacao, Aluguel aluguel) {
         super();
         this.id = id;
         this.cpf = cpf;
@@ -40,11 +40,11 @@ public class Pessoa {
         this.id = id;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

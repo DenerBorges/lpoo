@@ -1,0 +1,46 @@
+CREATE TABLE `pessoa` (
+	`id` int(11) AUTO_INCREMENT NOT NULL,
+	`cpf` varchar(255) UNIQUE NOT NULL,
+	`nome` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`senha` varchar(255) NOT NULL,
+	`status` varchar(255) NOT NULL,
+	`curso` varchar(255) NOT NULL,
+	`situacao` boolean NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `livro` (
+	`id` int(11) AUTO_INCREMENT NOT NULL,
+	`nome` varchar(255) NOT NULL,
+	`autor` varchar(255) NOT NULL,
+	`isbn` int(11) UNIQUE NOT NULL,
+	`ano` int(4) NOT NULL,
+	`numEdicao` int(10) NOT NULL,
+	`genero` varchar(255) NOT NULL,
+	`qtdTotal` int(255) NOT NULL,
+	`qtdAlugado` int(255) NOT NULL,
+	`situacao` boolean NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `aluguel` (
+	`id` int(11) AUTO_INCREMENT NOT NULL,
+	`date` date NOT NULL,
+	`dateEntrega` date NOT NULL,
+	`multa` int(255) NOT NULL,
+	`status` varchar(255),
+	`situacao` boolean NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `avaliacao` (
+	`id` int(11) AUTO_INCREMENT NOT NULL,
+	`nota` int(255) NOT NULL,
+	`situacao` boolean NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `aluguel`
+	ADD FOREIGN KEY (`idPessoa`) REFERENCES pessoa (`id`);
+	ADD FOREIGN KEY (`idLivro`) REFERENCES livro (`id`);
+
+ALTER TABLE `avaliacao`
+	ADD FOREIGN KEY (`idPessoa`) REFERENCES pessoa (`id`);
+	ADD FOREIGN KEY (`idLivro`) REFERENCES livro (`id`);

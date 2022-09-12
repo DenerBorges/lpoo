@@ -109,7 +109,7 @@ public class PessoaDAO extends BaseDAO{
            )
         {
             pstmt.setString(1, pessoa.getNome());
-            pstmt.setInt(2, pessoa.getCpf());
+            pstmt.setString(2, pessoa.getCpf());
             pstmt.setString(3, pessoa.getEmail());
             pstmt.setString(4, pessoa.getSenha());
             pstmt.setString(5, pessoa.getStatus());
@@ -133,7 +133,7 @@ public class PessoaDAO extends BaseDAO{
            )
         {
             pstmt.setString(1, pessoa.getNome());
-            pstmt.setInt(2, pessoa.getCpf());
+            pstmt.setString(2, pessoa.getCpf());
             pstmt.setString(3, pessoa.getEmail());
             pstmt.setString(4, pessoa.getSenha());
             pstmt.setString(5, pessoa.getStatus());
@@ -171,7 +171,7 @@ public class PessoaDAO extends BaseDAO{
     private static Pessoa resultsetToPessoa(ResultSet rs) throws SQLException {
         Pessoa p = new Pessoa();
         p.setId(rs.getLong("id"));
-        p.setCpf(rs.getInt("cpf"));
+        p.setCpf(rs.getString("cpf"));
         p.setNome(rs.getString("nome"));
         p.setEmail(rs.getString("email"));
         p.setSenha(rs.getString("senha"));
