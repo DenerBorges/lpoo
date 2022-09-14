@@ -11,7 +11,6 @@ public class Produto {
     private int quantidade;
     private double preco;
     private Fornecedor fornecedor;
-    private List<Item> items = new ArrayList<>();
 
     public Produto() {
         super();
@@ -62,14 +61,6 @@ public class Produto {
 
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
-    }
-
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Item> items) {
-        this.items = items;
     }
 
     @Override
