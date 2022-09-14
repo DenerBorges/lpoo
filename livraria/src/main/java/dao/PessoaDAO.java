@@ -149,19 +149,19 @@ public class PessoaDAO extends BaseDAO{
         }
     }
 
-    public static boolean softDeletePessoa(long id, boolean situacao) {
-        final String sql = "UPDATE pessoa SET situacao=? WHERE id=?";
+    public static boolean DeletePessoa(long id) {
+        final String sql = "DELETE FROM pessoa WHERE id=?";
         try
            (
                    Connection conn = getConnection();
                    PreparedStatement pstmt = conn.prepareStatement(sql)
            )
         {
-            pstmt.setBoolean(1, situacao);
-            pstmt.setLong(2, id);
-            int count = pstmt.executeUpdate();
-            return count > 0;
-
+            pstmt.setLong(1, id);
+            int deleted = pstmt.executeUpdate();
+            if (deleted == 0) {
+                return false;
+            } else return true;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

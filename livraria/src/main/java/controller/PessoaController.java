@@ -16,12 +16,13 @@ public class PessoaController {
         do {
             System.out.print("\n _____________Selecione uma Operacao_______________\n");
             System.out.print("\n 1- Inserir nova pessoa." +
-                    "\n 2- Atualizar uma pessoa." +
-                    "\n 3- Listar todas as pessoas." +
-                    "\n 4- Buscar pessoas por codigo." +
-                    "\n 5- Buscar pessoas por nome." +
-                    "\n 6- Buscar pessoas por situacao." +
-                    "\n 0- Sair.\n");
+                             "\n 2- Atualizar uma pessoa." +
+                             "\n 3- Listar todas as pessoas." +
+                             "\n 4- Buscar pessoas por codigo." +
+                             "\n 5- Buscar pessoas por nome." +
+                             "\n 6- Buscar pessoas por situacao." +
+                             "\n 7- Deletar uma pessoa." +
+                             "\n 0- Sair.\n");
             opiton = input.nextInt();
             input.nextLine();
             switch (opiton) {
@@ -36,6 +37,8 @@ public class PessoaController {
                 case 5: selectPessoasByNome();
                     break;
                 case 6: selectPessoasBySituacao();
+                    break;
+                case 7: deletar();
                     break;
                 default:
                     if (opiton != 0)
@@ -182,6 +185,19 @@ public class PessoaController {
             case 1: pessoas = PessoaDAO.selectPessoasBySituacao(true);
                 System.out.println("\nPessoa na situacao ATIVO:\n" + pessoas);
                 break;
+        }
+    }
+
+    private static void deletar() {
+        System.out.print("\nDigite o codigo da pessoa: ");
+        Long id = input.nextLong();
+        Boolean r = PessoaDAO.DeletePessoa(id);
+
+        if (r) {
+            System.out.print("\nPessoa deletada com sucesso.");
+        }
+        else {
+            System.out.print("\nCodigo nao encontrado.");
         }
     }
 

@@ -37,6 +37,18 @@ CREATE TABLE `avaliacao` (
 	`situacao` boolean NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+ALTER TABLE `pessoa`
+    ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `livro`
+    ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `aluguel`
+    ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `avaliacao`
+    ADD PRIMARY KEY (`id`);
+
 ALTER TABLE `aluguel`
 	ADD FOREIGN KEY (`idPessoa`) REFERENCES pessoa (`id`);
 	ADD FOREIGN KEY (`idLivro`) REFERENCES livro (`id`);
