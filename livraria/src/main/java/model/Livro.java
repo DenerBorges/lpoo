@@ -11,14 +11,12 @@ public class Livro {
     private int qtdTotal;
     private int qtdAlugado;
     private Boolean situacao;
-    private Aluguel aluguel;
-    private Avaliacao avaliacao;
 
     public Livro() {
         super();
     }
 
-    public Livro(Long id, String nome, String autor, int isbn, int ano, int numEdicao, String genero, int qtdTotal, int qtdAlugado, Boolean situacao, Aluguel aluguel, Avaliacao avaliacao) {
+    public Livro(Long id, String nome, String autor, int isbn, int ano, int numEdicao, String genero, int qtdTotal, int qtdAlugado, Boolean situacao) {
         super();
         this.id = id;
         this.nome = nome;
@@ -30,8 +28,6 @@ public class Livro {
         this.qtdTotal = qtdTotal;
         this.qtdAlugado = qtdAlugado;
         this.situacao = situacao;
-        this.aluguel = aluguel;
-        this.avaliacao = avaliacao;
     }
 
     public Long getId() {
@@ -106,22 +102,6 @@ public class Livro {
         this.qtdAlugado = qtdAlugado;
     }
 
-    public Aluguel getAluguel() {
-        return aluguel;
-    }
-
-    public void setAluguel(Aluguel aluguel) {
-        this.aluguel = aluguel;
-    }
-
-    public Avaliacao getAvaliacao() {
-        return avaliacao;
-    }
-
-    public void setAvaliacao(Avaliacao avaliacao) {
-        this.avaliacao = avaliacao;
-    }
-
     public Boolean getSituacao() {
         return situacao;
     }
@@ -133,6 +113,6 @@ public class Livro {
     @Override
     public String toString() {
         return "\nLivro{" + "id=" + id + ", nome='" + nome + '\'' + ", autor='" + autor + '\'' + ", isbn=" + isbn + ", ano=" + ano + ", numEdicao=" + numEdicao +
-                ", genero='" + genero + '\'' + ", qtdTotal=" + qtdTotal + ", qtdAlugado=" + qtdAlugado + ", situacao=" + situacao + ", aluguel=" + aluguel + ", avaliacao=" + avaliacao + '}';
+                ", genero='" + genero + '\'' + ", qtdTotal=" + qtdTotal + ", qtdAlugado=" + qtdAlugado + ", situacao=" + situacao + '}';
     }
 }

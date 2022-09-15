@@ -158,8 +158,8 @@ public class PessoaDAO extends BaseDAO{
            )
         {
             pstmt.setLong(1, id);
-            int deleted = pstmt.executeUpdate();
-            if (deleted == 0) {
+            int deletado = pstmt.executeUpdate();
+            if (deletado == 0) {
                 return false;
             } else return true;
         } catch (SQLException e) {

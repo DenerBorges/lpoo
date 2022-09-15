@@ -77,7 +77,7 @@ public class PessoaController {
         Pessoa pessoa = null;
         int option = 0;
         do {
-            System.out.print("\nDigite o codigo da pessoa.");
+            System.out.print("\nDigite o codigo da pessoa / Ou digite 0 para sair.");
             long codigo = input.nextLong();
             input.nextLine();
             if (codigo == 0) {
